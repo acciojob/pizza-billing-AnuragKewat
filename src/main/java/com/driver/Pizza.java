@@ -43,7 +43,7 @@ public class Pizza {
         // your code goes here
         if(!extraToppings) {
             this.price += this.toppings;
-            this.extraToppings = true;
+            extraToppings = true;
         }
     }
 
@@ -51,7 +51,7 @@ public class Pizza {
         // your code goes here
         if(!takeAway){
             this.price += 20;
-            this.takeAway = true;
+            takeAway = true;
         }
     }
 
@@ -66,11 +66,11 @@ public class Pizza {
 
             this.bill += "Total Price: " + this.price + "\n";
 
-            this.billCreated = true;
+            billCreated = true;
 
             return this.bill;
         }
 
-        return "";
+        return this.bill;
     }
 }

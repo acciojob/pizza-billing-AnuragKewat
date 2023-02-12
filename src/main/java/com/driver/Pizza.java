@@ -55,6 +55,7 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
+        if(billCreated) return "";
 
         if(isVeg) this.bill += "Base Price Of The Pizza: " + 300 + "\n";
         else this.bill += "Base Price Of The Pizza: " + 400 + "\n";
@@ -68,8 +69,8 @@ public class Pizza {
 
         if(takeAway) this.bill += "Paperbag Added: " + 20 + "\n";
 
-        if(billCreated) return "";
-        else this.bill += "Total Price: " + this.price + "\n";
+
+        if(!billCreated) this.bill += "Total Price: " + this.price + "\n";
 
         this.billCreated = true;
 
